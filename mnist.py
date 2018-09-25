@@ -42,13 +42,13 @@ model.add(keras.layers.Dense(10,activation="softmax"))
   # tf.keras.layers.Dense(10, activation=tf.nn.softmax)
 
 
-model.load_weights('./my_model_weights')
+# model.load_weights('./my_model_weights')
 # .load('my_model')
 model.compile(optimizer=keras.optimizers.Adam(),
               loss=keras.losses.categorical_crossentropy,
               metrics=['accuracy'])
 
-model.fit(x_train, y_train, batch_size=128, verbose=1,epochs=16,validation_split=1/12)
+model.fit(x_train, y_train, batch_size=128, verbose=1,epochs=160,validation_split=1/12)
 score = model.evaluate(x_test, y_test,verbose=0)
 
 print(score[0])
