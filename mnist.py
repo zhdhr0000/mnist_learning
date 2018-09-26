@@ -54,7 +54,7 @@ score = model.evaluate(x_test, y_test,verbose=0)
 print(score[0])
 print(score[1])
 
-model.save_weights('./mnist_model_weights')
+model.save('./mnist_model.h5')
 
 ### model序列化为JSON和yaml的方法
 # Serialize a model to JSON format
